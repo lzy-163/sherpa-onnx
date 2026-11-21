@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   test-go-package:
-    name: ${{ matrix.os }} ${{matrix.arch }}
+    name: ${{ matrix.os }} ${{ matrix.arch }}
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -414,7 +414,6 @@ jobs:
 
           echo $PWD
           ls -lh /C/Users/runneradmin/go/pkg/mod/github.com/k2-fsa/
-          ls -lh /C/Users/runneradmin/go/pkg/mod/github.com/k2-fsa/*
           cp -v /C/Users/runneradmin/go/pkg/mod/github.com/k2-fsa/sherpa-onnx-go-windows*/lib/i686-pc-windows-gnu/*.dll .
           ls -lh
 
